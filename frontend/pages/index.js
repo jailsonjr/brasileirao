@@ -14,7 +14,7 @@ export default function Home() {
       <main className={styles.main}>
 
         <header className={styles.header}>
-          <img  className={styles.logo} src='/img/national-brazil.fw.png'  />
+          <Image  alt="Logo of CBF" className={styles.logo} src='/img/national-brazil.fw.png' width={50} height={71} />
           <div className={styles.headerTitle}>
             <h1 className={styles.title}>
               Histórico do Campeonato Brasileiro
