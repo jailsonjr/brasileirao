@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+
+import AppTitle from '../Components/AppTitle';
 
 export default function Home() {
   return (
@@ -12,17 +13,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-
         <header className={styles.header}>
-          <Image  alt="Logo of CBF" className={styles.logo} src='/img/national-brazil.fw.png' width={50} height={71} />
-          <div className={styles.headerTitle}>
-            <h1 className={styles.title}>
-              Histórico do Campeonato Brasileiro
-            </h1>
-            <p className={styles.subTitle}>
-              Sistema de pontos corridos
-            </p>
-          </div>
+          <AppTitle />
         </header>
       </main>
     </div>
