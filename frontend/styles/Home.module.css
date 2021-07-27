@@ -7,11 +7,15 @@
   background-color: whitesmoke;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 50px;
+}
+
 .appTitle {
   display: flex;
   width: 40%;
-  margin-left: 20px;
-  margin-top: 20px;
 }
 
 .logo {
@@ -20,10 +24,10 @@
 }
 
 .headerTitle {
-  margin-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 20px;
 }
 
 .title {
@@ -38,4 +42,43 @@
   margin: 0;
   color: #007E57;
   font-size: 17px;
+}
+
+.appSelect {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-height: 50px;
+}
+
+.leftButton, .rightButton {
+  padding: 1em 1em 0.9em;
+}
+
+.leftButton, .rightButton, .selectInput {
+  border: 2px solid #DDDDDD;
+  background-color: white;
+  border-radius: 4px;
+  color: #666;
+}
+
+.selectInput {
+  padding: 0.6em 2em;
+  margin: 0 1em;
+  text-align: center;
+  appearance: none;
+  font-size: 20px;
+}
+
+.selectInput::after {
+  content: 'oal mundo';
+  color: tomato;
+}
+
+.selectInput:hover, .selectInput:active, .selectInput:focus,
+.leftButton:hover, .leftButton:active, .leftButton:focus, 
+.rightButton:hover, .rightButton:active, .rightButton:focus {
+  outline: none;
+  border-color: #1E508C;
+  color: #1E508C;
 }
