@@ -1,10 +1,20 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css'
-
 import AppTitle from '../Components/AppTitle';
 import Navigation from '../Components/Navigation';
 
 export default function Home() {
+
+  const router = useRouter();
+  const [year, setYear] = useState(2003);
+
+  useEffect(() => {
+    let slug = router.asPath.split("/")[1];
+    setYear(slug);
+  });
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,9 +25,14 @@ export default function Home() {
 
       <main className={styles.main}>
         <header className={styles.header}>
-          <AppTitle />
-          <Navigation />
+          <AppTitle year={year}/>
+          <Navigation  activeYear={year} />
         </header>
+
+
+        <div className={styles.contentConteiner}>
+            times
+        </div>
       </main>
     </div>
   )

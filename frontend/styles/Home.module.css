@@ -19,8 +19,9 @@
 }
 
 .logo {
-  max-width: 50px;
-  max-height: 71px;
+  width: 50px;
+  height: auto;
+  align-items: flex-start;
 }
 
 .headerTitle {
@@ -52,7 +53,7 @@
   margin-top: 10px;
 }
 
-.appNavItem {
+.appNavItem, .appNavItemActive {
   border: 2px solid #DDDDDD;
   border-radius: 5px;
   margin-left: 5px;
@@ -61,9 +62,15 @@
   color: #666;
 }
 
-.appNavItem:hover {
+.appNavItem:hover, .appNavItemActive {
   outline: none;
   border-color: #1E508C;
   color: #1E508C;
   cursor: pointer;
+}
+
+.contentConteiner{
+  background-color:burlywood;
+  margin: 20px 50px;
+  padding: 1em 0;
 }
