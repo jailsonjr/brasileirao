@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 import AppTitle from '../Components/AppTitle';
-import AppSelect from '../Components/AppSelect';
+import Navigation from '../Components/Navigation';
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <main className={styles.main}>
         <header className={styles.header}>
           <AppTitle />
-          <AppSelect />
+          <Navigation />
         </header>
       </main>
     </div>

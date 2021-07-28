@@ -44,41 +44,26 @@
   font-size: 17px;
 }
 
-.appSelect {
+.appNav {
   display: flex;
   justify-content: center;
   align-content: center;
   max-height: 50px;
+  margin-top: 10px;
 }
 
-.leftButton, .rightButton {
-  padding: 1em 1em 0.9em;
-}
-
-.leftButton, .rightButton, .selectInput {
+.appNavItem {
   border: 2px solid #DDDDDD;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding: 0.9em 0.5em 0.4em;
   background-color: white;
-  border-radius: 4px;
   color: #666;
 }
 
-.selectInput {
-  padding: 0.6em 2em;
-  margin: 0 1em;
-  text-align: center;
-  appearance: none;
-  font-size: 20px;
-}
-
-.selectInput::after {
-  content: 'oal mundo';
-  color: tomato;
-}
-
-.selectInput:hover, .selectInput:active, .selectInput:focus,
-.leftButton:hover, .leftButton:active, .leftButton:focus, 
-.rightButton:hover, .rightButton:active, .rightButton:focus {
+.appNavItem:hover {
   outline: none;
   border-color: #1E508C;
   color: #1E508C;
+  cursor: pointer;
 }
