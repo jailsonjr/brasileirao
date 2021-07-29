@@ -1,10 +1,11 @@
 import axios from 'axios';
 
-const API_URL = process.env.API_URL;
+//const API_URL = process.env.API_URL;
+const API_URL = 'https://brasileirao-api.vercel.app/api/';
 
 export const getYearData = async (year) => {
     let URL = API_URL + `${year}`;
-    console.log("URL:" + API_URL);
+    console.log("URL:" + URL);
     let http = await axios.get(URL);
     let response = await http.data;
     console.log(http.statusText);

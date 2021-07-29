@@ -5,11 +5,18 @@ import styles from '../styles/Home.module.css'
 export function Table({year}) {
 
   const [dataTable, setDataTable] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getYearData(year).then(data => setDataTable(data));
+    getYearData(year).then(data => {
+      setDataTable(data);
+      setLoading(false);
+    });
   }, [year])
 
+  if(loading) {
+    return <div>carregando</div>;
+  }
 
   return (
       <table className={styles.appTable}>

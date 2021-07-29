@@ -9,12 +9,13 @@ import {Table} from '../Components/Table';
 export default function Home() {
 
   const router = useRouter();
+  const years = ["2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015"];
   const [year, setYear] = useState(2003);
 
   useEffect(() => {
     let slug = router.query.year;
-    if(!slug) {
-      slug = 2003;
+    if(!slug || !years.includes(slug)) {
+      slug = "2003";
     }
     setYear(slug);
   });
