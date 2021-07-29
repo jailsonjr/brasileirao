@@ -1,14 +1,16 @@
 import axios from 'axios';
 
+const API_URL = process.env.API_URL || "http://localhost:3001/";
+
 export const getYearData = async (year) => {
-    let URL = "http://localhost:3001/" + `${year}`;
-    console.log(URL);
+    let URL = API_URL + `${year}`;
     let http = await axios.get(URL);
     let response = await http.data;
+    console.log(http.statusText);
     let lengthResponse = response.length;
     let tableData = getTableData(response[lengthResponse - 1]);
-    console.log(sortTable(tableData));
-    return tableData;
+    let sortedTable = sortTable(tableData);
+    return sortedTable;
 }
 
 const getTableData = (response) => {
@@ -42,9 +44,12 @@ const getTableData = (response) => {
 const sortTable = (response) => {
     return response.sort((a,b) => {
         if(b.pontos == a.pontos){
-            return b.gols_marcados - a.gols_marcados;
+            if(b.vitorias == a.vitorias) {
+                return b.gols_marcados - a.gols_marcados;
+            }
+            return b.vitorias - a.vitorias;    
         }
-        return b.pontos - a.pontos
+        return b.pontos - a.pontos;
     });
 }
 
