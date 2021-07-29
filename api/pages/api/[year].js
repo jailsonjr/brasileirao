@@ -6,5 +6,6 @@ export  default function handler(req, res) {
     methods: ['GET', 'POST', 'OPTIONS']
   });
   let data = json_data[req.query.year] || {};
+  
   res.status(200).json(data);  
 }
