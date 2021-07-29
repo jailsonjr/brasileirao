@@ -10,7 +10,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 20px 50px;
+  margin: 20px;
 }
 
 .appTitle {
@@ -55,7 +55,7 @@
   border: 2px solid #DDDDDD;
   border-radius: 5px;
   margin-left: 5px;
-  padding: 0.9em 0.5em 0.4em;
+  padding: 1em 0.5em 0.4em;
   background-color: white;
   color: #666;
 }
@@ -68,7 +68,7 @@
 }
 
 .contentConteiner{
-  margin: 20px 50px;
+  margin: 20px;
   padding: 1em 0;
 }
 
