@@ -1,8 +1,8 @@
 .container {
   width: 95vw;
-  height: 90vh;
+  height: auto;
   padding: 5px;
-  margin: 2rem auto 0;
+  margin: 2rem auto;
   border-radius: 4px;
   background-color: whitesmoke;
 }
@@ -70,7 +70,16 @@
 }
 
 .contentConteiner{
-  background-color:burlywood;
   margin: 20px 50px;
   padding: 1em 0;
+}
+
+.appTable {
+  background-color:chocolate;
+  width: 100%;
+}
+
+
+.appTable th {
+  text-align: left;
 }

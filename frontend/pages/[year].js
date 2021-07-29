@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css'
 import AppTitle from '../Components/AppTitle';
 import Navigation from '../Components/Navigation';
+import {Table} from '../Components/Table';
 
 export default function Home() {
 
@@ -11,7 +12,10 @@ export default function Home() {
   const [year, setYear] = useState(2003);
 
   useEffect(() => {
-    let slug = router.asPath.split("/")[1];
+    let slug = router.query.year;
+    if(!slug) {
+      slug = 2003;
+    }
     setYear(slug);
   });
 
@@ -24,15 +28,16 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <header className={styles.header}>
-          <AppTitle year={year}/>
-          <Navigation  activeYear={year} />
-        </header>
 
+          <header className={styles.header}>
+            <AppTitle year={year}/>
+            <Navigation  activeYear={year} />
+          </header>
 
-        <div className={styles.contentConteiner}>
-            times
-        </div>
+          <div className={styles.contentConteiner}>
+              <Table year={year}/>
+          </div>
+
       </main>
     </div>
   )
