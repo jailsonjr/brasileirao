@@ -4,6 +4,7 @@ const API_URL = process.env.API_URL || "http://localhost:3001/";
 
 export const getYearData = async (year) => {
     let URL = API_URL + `${year}`;
+    console.log(URL);
     let http = await axios.get(URL);
     let response = await http.data;
     console.log(http.statusText);
