@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getYearData } from "../Services/Api";
+import ImageClub from './ImageClub';
 import styles from '../styles/Home.module.css'
 
 export function Table({year}) {
@@ -24,7 +25,7 @@ export function Table({year}) {
         <thead>
           <tr>
             <th>&nbsp;</th>
-            <th>&nbsp;</th>
+            <th></th>
             <th>p</th>
             <th>v</th>
             <th>e</th>
@@ -39,7 +40,10 @@ export function Table({year}) {
             dataTable.map((time,index) => {
               return <tr key={index}>
                 <td>{index + 1}</td>
-                <td>{time.nome}</td>
+                <td>
+                  <ImageClub name={time.nome} className="time-logo"/>
+                  <span>{time.nome}</span>
+                </td>
                 <td>{time.pontos}</td>
                 <td>{time.vitorias}</td>
                 <td>{time.empates}</td>
