@@ -9,6 +9,7 @@ export function Table({year}) {
 
   useEffect(() => {
     getYearData(year).then(data => {
+      setLoading(true);
       setDataTable(data);
       setLoading(false);
     });
@@ -19,15 +20,15 @@ export function Table({year}) {
   }
 
   return (
-      <table className={styles.appTable}>
+      <table className={styles.appTable} cellPadding="0" cellSpacing="0">
         <thead>
           <tr>
             <th>&nbsp;</th>
             <th>&nbsp;</th>
-            <th>pontos</th>
-            <th>vitorias</th>
-            <th>empates</th>
-            <th>derrotas</th>
+            <th>p</th>
+            <th>v</th>
+            <th>e</th>
+            <th>d</th>
             <th>gp</th>
             <th>gc</th>
             <th>s</th>
