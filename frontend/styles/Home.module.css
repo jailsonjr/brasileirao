@@ -63,7 +63,8 @@
 .appNavItem:hover, .appNavItemActive {
   outline: none;
   border-color: #1E508C;
-  color: #1E508C;
+  background-color: #1E508C;
+  color: white;
   cursor: pointer;
 }
 
@@ -120,6 +121,40 @@
 .appTable tbody tr td:nth-child(2) span{
   display: block;
   margin-left: 20px;
+}
+
+@media screen and (max-width: 1230px) {
+
+  .header{
+    flex-direction: column;
+  }
+
+  .appTitle {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;    
+  }
+
+  .title {
+    margin-top: 10px;
+  }
+
+  .subTitle {
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  .appNav {
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  .appNavItem, .appNavItemActive {
+    padding: 1em 0.5em 0.9em;
+  }
+  
 }
 
 
