@@ -76,6 +76,7 @@
   border-radius: 4px;
   width: 100%;
   border: none;
+  position: relative;
 }
 
 .appTable th {
@@ -121,6 +122,32 @@
 .appTable tbody tr td:nth-child(2) span{
   display: block;
   margin-left: 20px;
+}
+
+.appLoading {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:white;
+  opacity: 75%;
+}
+
+.appLoading .appLoadingIcon {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 25px);
+  margin: 25vh auto;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 1400px) {

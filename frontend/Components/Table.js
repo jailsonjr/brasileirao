@@ -3,6 +3,9 @@ import { getYearData } from "../Services/Api";
 import ImageClub from './ImageClub';
 import styles from '../styles/Home.module.css'
 
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 export function Table({year}) {
 
   const [dataTable, setDataTable] = useState([]);
@@ -16,11 +19,8 @@ export function Table({year}) {
     });
   }, [year])
 
-  if(loading) {
-    return <div>carregando</div>;
-  }
-
   return (
+    <>
       <table className={styles.appTable} cellPadding="0" cellSpacing="0">
         <thead>
           <tr>
@@ -56,6 +56,11 @@ export function Table({year}) {
           }
 
         </tbody>
+        <div className={styles.appLoading}>
+          <FontAwesomeIcon  icon={faSpinner} className={styles.appLoadingIcon}/>
+        </div>
       </table>
+      
+    </>
   )
 }
