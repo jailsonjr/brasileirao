@@ -123,7 +123,7 @@
   margin-left: 20px;
 }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1400px) {
 
   .header{
     flex-direction: column;
@@ -154,6 +154,71 @@
   .appNavItem, .appNavItemActive {
     padding: 1em 0.5em 0.9em;
   }
+  
+}
+
+@media screen and (max-width: 900px) {
+
+  .container {
+    width: 95vw;
+    height: auto;
+    padding: 10px 0;
+    margin: 10px auto;
+  }
+
+  .header {
+    margin: 5px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .subTitle {
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 15px;
+  }
+
+  .appNav {
+    margin: 0;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    max-height: fit-content;
+  }
+
+  .appNavItem, .appNavItemActive {
+    padding: 0.5em 0.5em 0.4em;
+    margin-top: 5px;
+  }
+
+  .appNavItem:hover, .appNavItemActive {
+    outline: none;
+    border-color: #1E508C;
+    background-color: #1E508C;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .contentConteiner{
+    margin: 0;
+  }
+  
+  .appTable {
+    padding: 10px;
+  }
+
+  .appTable td:nth-child(1){
+    padding: 0 5px;
+  }
+
+  .appTable tbody tr td:nth-child(2) span{
+    margin-left: 10px;
+  }
+ 
+
   
 }
 
