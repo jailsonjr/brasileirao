@@ -5,10 +5,8 @@ const API_URL = 'https://brasileirao-api.vercel.app/api/';
 
 export const getYearData = async (year) => {
     let URL = API_URL + `${year}`;
-    console.log("URL:" + URL);
     let http = await axios.get(URL);
     let response = await http.data;
-    console.log(http.statusText);
     let lengthResponse = response.length;
     let tableData = getTableData(response[lengthResponse - 1]);
     let sortedTable = sortTable(tableData);

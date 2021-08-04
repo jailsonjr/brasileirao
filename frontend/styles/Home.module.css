@@ -70,6 +70,12 @@
 
 .contentConteiner{
   margin: 0 20px 20px;
+  min-height: 40vh;
+}
+
+.appConteinerTable {
+  width: 100%;
+  position: relative;
 }
 
 .appTable {
@@ -125,17 +131,17 @@
 }
 
 .appLoading {
-  display: none;
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color:white;
-  opacity: 75%;
 }
 
 .appLoading .appLoadingIcon {
+  font-size: 30px;
   width: 50px;
   position: absolute;
   top: 0;
